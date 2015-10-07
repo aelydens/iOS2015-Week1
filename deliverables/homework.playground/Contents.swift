@@ -4,6 +4,9 @@ import Foundation
 
 //: Create an empty array to store shopping list items
 var shoppingList: [String] = []
+var s = []
+var b = [String]()
+var f = Array<String>()
 
 //: Add at least 5 items to the array using 3 different insertion methods
 shoppingList.append("Apples")
@@ -37,7 +40,7 @@ arraySortWithIndex(arrayOfAnimals)
 func upcaseArray(array: [String]) -> [String] {
     var upcasedLetters: [String] = []
     for elem in array {
-        let first = String(elem.characters.first!)
+        let first = String(elem.characters.first!).uppercaseString
         if (!upcasedLetters.contains(first)) {
             upcasedLetters.append(first)
         }
@@ -46,7 +49,7 @@ func upcaseArray(array: [String]) -> [String] {
 }
 
 
-var strings = ["ball", "zoo", "giraffe", "gat", "gog"]
+var strings: [String] = ["ball", "zoo", "giraffe", "gat", "gog"]
 
 print(upcaseArray(strings))
 
@@ -62,7 +65,7 @@ func matchString(array: [String], input: String) -> [String] {
 }
 
 
-var animals = ["dog", "bear", "cat", "mouse"]
+var animals: [String] = ["dog", "bear", "cat", "mouse"]
 
 print(matchString(animals, input: "bear"))
 
