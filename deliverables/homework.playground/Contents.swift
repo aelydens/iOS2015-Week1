@@ -44,6 +44,14 @@ func arraySortWithIndex(array: [String]) {
     }
 }
 
+
+func eachWithIndex(array: [String]) {
+    for index in 0...array.count - 1 {
+        print("\(array[index])")
+    }
+}
+
+eachWithIndex(shoppingList)
 arraySortWithIndex(arrayOfAnimals)
 //: Create a function that returns a new array containing the first letter of each item, in uppercase. The returned array should be sorted and not have any repeated characters.
 func upcaseArray(array: [String]) -> [String] {
@@ -54,7 +62,7 @@ func upcaseArray(array: [String]) -> [String] {
             upcasedLetters.append(first)
         }
     }
-    return upcasedLetters
+    return upcasedLetters.sort()
 }
 
 
