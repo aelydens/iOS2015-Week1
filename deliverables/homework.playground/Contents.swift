@@ -13,19 +13,28 @@ shoppingList.append("Apples")
 shoppingList.insert("Oranges", atIndex: 1)
 shoppingList += ["Bread", "Eggs", "Avocado"]
 shoppingList += ["Grapes"]
+shoppingList.appendContentsOf(["Lemons"])
+shoppingList.insertContentsOf(["Olives"], at: 0)
 
 //: Sort your array of items
-func arraySort(array: [String]) {
+func printArraySort(array: [String]) {
     for item in shoppingList.sort() {
         print(item)
     }
 }
 
-arraySort(shoppingList);
+printArraySort(shoppingList);
+shoppingList.sort()
+shoppingList.sortInPlace()
+
 //: Create a function to print an array, with it's index, with one item per line
-for (index, item) in shoppingList.enumerate() {
-    print("\(index): \(item)")
+func printIndexAndItem(array: [String]) {
+    for (index, item) in shoppingList.enumerate() {
+        print("\(index): \(item)")
+    }
 }
+
+printIndexAndItem(shoppingList)
 //: Combine the above. Create a function that takes an array, sorts it and prints it with it's index, with one item per line
 var arrayOfAnimals: [String] = ["aac", "bears", "orangutans", "aaa", "aab"]
 
